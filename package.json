@@ -1,22 +1,30 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "electron-bootstrap-starter",
+  "version": "1.2.8",
+  "description": "Electron with Bootstrap 4 Example",
+  "keywords": [
+    "Bootstrap",
+    "Electron",
+    "ES6",
+    "ECMAScript 6"
+  ],
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "shaack",
+  "license": "ISC",
   "devDependencies": {
-    "electron": "^8.0.0"
+    "electron": "^1.8.8"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "bootstrap": "^4.3.1",
+    "bootstrap-input-spinner": "^1.11.4",
+    "electron-json-storage": "^4.1.6",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "tablesort": "^5.1.0"
   }
 }
