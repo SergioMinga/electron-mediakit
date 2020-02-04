@@ -56,6 +56,226 @@ body{
             }
         }
     }
+
+    &.fullmobile{
+        .left-bar{
+            background-color: #d5422d;
+        }
+        .col-left{
+            h2{
+                color: #d5422d;
+            }
+        }
+        .opciones{
+            .opcion{
+                color: #d5422d;
+                border: solid 1px #d5422d;
+            }
+        }
+        .medidas{
+            .medida{
+                p{
+                    color: #d5422d; 
+                }
+            }
+        }
+        .modelos{
+            .modelo{
+                background-color: #d5422d;
+            }
+        }
+        .dispositivos{
+            .dispositivo{
+                svg .st0{
+                    fill:#d5422d;
+                }
+            }
+        }
+        .detalles{
+            .ctr{
+                .ctrpromedio{
+                    p{
+                        color: #d5422d;
+                    }
+                }
+            }
+            .viewability{
+                .viewabilitybar{
+                    .number{
+                        color: #d5422d;
+                    }
+                    .selector{
+                        background-color: #d5422d;
+                    }
+                }
+            }
+        }
+    }
+
+    &.video{
+        .left-bar{
+            background-color: #f3ad38;
+        }
+        .col-left{
+            h2{
+                color: #f3ad38;
+            }
+        }
+        .opciones{
+            .opcion{
+                color: #f3ad38;
+                border: solid 1px #f3ad38;
+            }
+        }
+        .medidas{
+            .medida{
+                p{
+                    color: #f3ad38; 
+                }
+            }
+        }
+        .modelos{
+            .modelo{
+                background-color: #f3ad38;
+            }
+        }
+        .dispositivos{
+            .dispositivo{
+                svg .st0{
+                    fill:#f3ad38;
+                }
+            }
+        }
+        .detalles{
+            .ctr{
+                .ctrpromedio{
+                    p{
+                        color: #f3ad38;
+                    }
+                }
+            }
+            .viewability{
+                .viewabilitybar{
+                    .number{
+                        color: #f3ad38;
+                    }
+                    .selector{
+                        background-color: #f3ad38;
+                    }
+                }
+            }
+        }
+    }
+
+    &.nativo{
+        .left-bar{
+            background-color: #f37237;
+        }
+        .col-left{
+            h2{
+                color: #f37237;
+            }
+        }
+        .opciones{
+            .opcion{
+                color: #f37237;
+                border: solid 1px #f37237;
+            }
+        }
+        .medidas{
+            .medida{
+                p{
+                    color: #f37237; 
+                }
+            }
+        }
+        .modelos{
+            .modelo{
+                background-color: #f37237;
+            }
+        }
+        .dispositivos{
+            .dispositivo{
+                svg .st0{
+                    fill:#f37237;
+                }
+            }
+        }
+        .detalles{
+            .ctr{
+                .ctrpromedio{
+                    p{
+                        color: #f37237;
+                    }
+                }
+            }
+            .viewability{
+                .viewabilitybar{
+                    .number{
+                        color: #f37237;
+                    }
+                    .selector{
+                        background-color: #f37237;
+                    }
+                }
+            }
+        }
+    }
+    &.itt{
+        .left-bar{
+            background-color: #00becf;
+        }
+        .col-left{
+            h2{
+                color: #00becf;
+            }
+        }
+        .opciones{
+            .opcion{
+                color: #00becf;
+                border: solid 1px #00becf;
+            }
+        }
+        .medidas{
+            .medida{
+                p{
+                    color: #00becf; 
+                }
+            }
+        }
+        .modelos{
+            .modelo{
+                background-color: #00becf;
+            }
+        }
+        .dispositivos{
+            .dispositivo{
+                svg .st0{
+                    fill:#00becf;
+                }
+            }
+        }
+        .detalles{
+            .ctr{
+                .ctrpromedio{
+                    p{
+                        color: #00becf;
+                    }
+                }
+            }
+            .viewability{
+                .viewabilitybar{
+                    .number{
+                        color: #00becf;
+                    }
+                    .selector{
+                        background-color: #00becf;
+                    }
+                }
+            }
+        }
+    }
+
     .left-bar{
         width: 20px;
         position: absolute;

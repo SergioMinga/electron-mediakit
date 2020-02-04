@@ -31,6 +31,118 @@ body.overpage .detalles .viewability .viewabilitybar .number {
 body.overpage .detalles .viewability .viewabilitybar .selector {
   background-color: #b71541;
 }
+body.fullmobile .left-bar {
+  background-color: #d5422d;
+}
+body.fullmobile .col-left h2 {
+  color: #d5422d;
+}
+body.fullmobile .opciones .opcion {
+  color: #d5422d;
+  border: solid 1px #d5422d;
+}
+body.fullmobile .medidas .medida p {
+  color: #d5422d;
+}
+body.fullmobile .modelos .modelo {
+  background-color: #d5422d;
+}
+body.fullmobile .dispositivos .dispositivo svg .st0 {
+  fill: #d5422d;
+}
+body.fullmobile .detalles .ctr .ctrpromedio p {
+  color: #d5422d;
+}
+body.fullmobile .detalles .viewability .viewabilitybar .number {
+  color: #d5422d;
+}
+body.fullmobile .detalles .viewability .viewabilitybar .selector {
+  background-color: #d5422d;
+}
+body.video .left-bar {
+  background-color: #f3ad38;
+}
+body.video .col-left h2 {
+  color: #f3ad38;
+}
+body.video .opciones .opcion {
+  color: #f3ad38;
+  border: solid 1px #f3ad38;
+}
+body.video .medidas .medida p {
+  color: #f3ad38;
+}
+body.video .modelos .modelo {
+  background-color: #f3ad38;
+}
+body.video .dispositivos .dispositivo svg .st0 {
+  fill: #f3ad38;
+}
+body.video .detalles .ctr .ctrpromedio p {
+  color: #f3ad38;
+}
+body.video .detalles .viewability .viewabilitybar .number {
+  color: #f3ad38;
+}
+body.video .detalles .viewability .viewabilitybar .selector {
+  background-color: #f3ad38;
+}
+body.nativo .left-bar {
+  background-color: #f37237;
+}
+body.nativo .col-left h2 {
+  color: #f37237;
+}
+body.nativo .opciones .opcion {
+  color: #f37237;
+  border: solid 1px #f37237;
+}
+body.nativo .medidas .medida p {
+  color: #f37237;
+}
+body.nativo .modelos .modelo {
+  background-color: #f37237;
+}
+body.nativo .dispositivos .dispositivo svg .st0 {
+  fill: #f37237;
+}
+body.nativo .detalles .ctr .ctrpromedio p {
+  color: #f37237;
+}
+body.nativo .detalles .viewability .viewabilitybar .number {
+  color: #f37237;
+}
+body.nativo .detalles .viewability .viewabilitybar .selector {
+  background-color: #f37237;
+}
+body.itt .left-bar {
+  background-color: #00becf;
+}
+body.itt .col-left h2 {
+  color: #00becf;
+}
+body.itt .opciones .opcion {
+  color: #00becf;
+  border: solid 1px #00becf;
+}
+body.itt .medidas .medida p {
+  color: #00becf;
+}
+body.itt .modelos .modelo {
+  background-color: #00becf;
+}
+body.itt .dispositivos .dispositivo svg .st0 {
+  fill: #00becf;
+}
+body.itt .detalles .ctr .ctrpromedio p {
+  color: #00becf;
+}
+body.itt .detalles .viewability .viewabilitybar .number {
+  color: #00becf;
+}
+body.itt .detalles .viewability .viewabilitybar .selector {
+  background-color: #00becf;
+}
 body .left-bar {
   width: 20px;
   position: absolute;
