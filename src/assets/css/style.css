@@ -1,0 +1,101 @@
+html,body,#app { height: 100%; margin: 0px; padding: 0px; overflow: hidden;}
+#full { height: 100% }
+div#index-1{
+    position: relative;
+}
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.nav-router {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+div#full.index-1 {
+    background: rgba(225,4,52,1);
+    background: -moz-linear-gradient(-45deg, rgba(225,4,52,1) 0%, rgba(195,10,69,1) 49%, rgba(189,11,72,1) 58%, rgba(160,17,88,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(225,4,52,1)), color-stop(49%, rgba(195,10,69,1)), color-stop(58%, rgba(189,11,72,1)), color-stop(100%, rgba(160,17,88,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(225,4,52,1) 0%, rgba(195,10,69,1) 49%, rgba(189,11,72,1) 58%, rgba(160,17,88,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(225,4,52,1) 0%, rgba(195,10,69,1) 49%, rgba(189,11,72,1) 58%, rgba(160,17,88,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(225,4,52,1) 0%, rgba(195,10,69,1) 49%, rgba(189,11,72,1) 58%, rgba(160,17,88,1) 100%);
+    background: linear-gradient(135deg, rgba(225,4,52,1) 0%, rgba(195,10,69,1) 49%, rgba(189,11,72,1) 58%, rgba(160,17,88,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e10434', endColorstr='#a01158', GradientType=1 );
+}
+.title-2 {
+    color: #8c273d;
+    padding-left: 30px;
+    margin-top: 0;
+    display: inline-block;
+}
+.title-2 h2{
+    margin-top: 15px;
+}
+.content-next  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+ 
+.background-line {
+    position: relative;
+    height: 100%;
+}
+.background-line img{
+    position: absolute;
+    height: 100%;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.context-center-align h1 {
+    color: #ffff;
+    font-size: 73px;
+}
+
+.context-center-align {
+    display: flex;
+    align-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-back {
+    background-color: #8c273d;
+    background-image: url(../images/textura.png);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.sidebar-back {
+    width: 7%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.context-body {
+    padding-left: 7%;
+}
+.divider {
+    width: 147px;
+    height: 7px;
+    background: #8c273d;
+}
+.full-absolute{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

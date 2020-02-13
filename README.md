@@ -1,28 +1,24 @@
-# electron-bootstrap-starter
-Electron with Bootstrap 4 starter project with CRUD and data persistence.
+# electron-mediakit
 
-![electron-bootstrap-starter](https://shaack.com/projekte/assets/img/electron-bootstrap-starter.png "electron-bootstrap-starter")
+## Project setup
+```
+npm install
+```
 
-## This is
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-A starter project to show how to get [Electron](https://electronjs.org/) and Bootstrap 4 
-running together. 
+### Compiles and minifies for production
+```
+npm run build
+```
 
-### Features
-- Bootstrap 4
-- ES6
-- Components architecture
-- Simple reactive behaviour (without React, Angular etc.)
-- Font-Awesome 5 integration
-- CRUD example with JSON storage in file
-- Settings component with persistent storage
+### Lints and fixes files
+```
+npm run lint
+```
 
-## Installation
-
-Clone sources and run
-
-```npm install```
-
-## Running
-
-```npm start```
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

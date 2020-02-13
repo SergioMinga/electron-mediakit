@@ -1,30 +1,37 @@
 {
-  "name": "electron-bootstrap-starter",
-  "version": "1.2.8",
-  "description": "Electron with Bootstrap 4 Example",
-  "keywords": [
-    "Bootstrap",
-    "Electron",
-    "ES6",
-    "ECMAScript 6"
-  ],
-  "main": "main.js",
+  "name": "electron-mediakit",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "electron ."
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
-  "author": "shaack",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^1.8.8"
-  },
+  "main": "background.js",
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "bootstrap": "^4.3.1",
-    "bootstrap-input-spinner": "^1.11.4",
-    "electron-json-storage": "^4.1.6",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
-    "tablesort": "^5.1.0"
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "bootstrap-vue": "^2.4.0",
+    "aos": "^2.3.4",
+    "axios": "^0.18.1",
+    "vue-router": "^3.1.5",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-plugin-vuex": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "electron": "^6.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-cli-plugin-electron-builder": "~1.4.5",
+    "vue-template-compiler": "^2.6.11"
   }
 }
