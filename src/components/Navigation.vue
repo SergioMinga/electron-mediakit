@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <nav>
-      <router-link to="/">Home</router-link>
-    </nav>
+  <div class="nav-top">
+    <v-btn color="pink" dark  @click.stop="drawer = !drawer" > Toggle </v-btn>
   </div>
 </template>

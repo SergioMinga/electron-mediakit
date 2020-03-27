@@ -60,33 +60,7 @@ img {
     font-size: 73px;
 }
 
-.context-center-align {
-    display: flex;
-    align-content: center;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.sidebar-back {
-    background-color: #8c273d;
-    background-image: url(../images/textura.png);
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-.sidebar-back {
-    width: 7%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.context-body {
-    padding-left: 7%;
-}
+ 
 .divider {
     width: 147px;
     height: 7px;
@@ -99,3 +73,91 @@ img {
     right: 0;
     bottom: 0;
 }
+.content-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+ 
+img.img-fluid.bg-absolute {
+    height: 100%;
+    width: 100%;
+}
+aside.v-navigation-drawer.v-navigation-drawer--absolute.v-navigation-drawer--open.v-navigation-drawer--right.theme--dark {
+    z-index: 3;
+}
+
+.tab-nav-minga.v-card.v-sheet {
+    z-index: 9;
+    border-radius: 15px 0px 0px 15px !important;
+}
+
+.full-absolute img{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) !important;
+}
+ 
+.theme--dark.v-tabs>.v-tabs-bar {
+    background-color: #cc093b !important;
+}
+
+.nav-top {
+     position: absolute; 
+    right: 0;
+    top: 0;
+    z-index: 999;
+    max-width: 50%;
+    float: right;
+}
+.nav-tematic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.tab-nav-minga.v-card.v-sheet .v-tabs-bar {
+    border-radius: inherit;
+    height: 30px !important;
+}
+.theme--dark.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: #cc093b !important;
+    outline: none;
+}
+
+.theme--light.v-tabs-items {
+    background-color: #fff;
+    height: calc(100vh);
+}
+
+.v-window-item { 
+    height: calc(100vh);
+}
+
+video#ad-video {
+    height: 100%;
+    background: transparent;
+}
+.video-absolute {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    top: 0;
+}
+video#ad-video.v-overside {
+    max-width: 67vh;
+    margin: 0 auto;
+}
+video#ad-video.p-push {
+    max-width: 50vh;
+    margin: 0 auto;
+}
+video#ad-video.p-itt {
+    max-width: 68vh;
+    margin: 0 auto;
+}
+
