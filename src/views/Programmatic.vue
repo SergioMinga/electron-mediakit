@@ -3,9 +3,9 @@
 		<div class="nav-top"> 
 			<template>
 				<v-card class="tab-nav-minga">
-					<v-tabs v-model="tab" background-color="primary" color="white" dark @change="onTabChange" center-active show-arrows>
+					<v-tabs v-model="tabProgrammatic" background-color="primary" color="white" dark @change="onTabChange" center-active show-arrows>
 						<v-tab>Programmatic</v-tab>
-						<v-tab>Qué es?</v-tab>
+						<v-tab>¿Qué es?</v-tab>
 						<v-tab>Formatos</v-tab> 
 						<v-tab>-Pendiente- </v-tab> 
 						<v-tab>-Pendiente-</v-tab>  
@@ -13,16 +13,27 @@
 					</v-tabs>
 				</v-card>  
 			</template> 
-			<div class="my-2 text-right" v-if="counter==5" style="z-index:7; position:relative">
+			<div class="my-2 text-right" v-if="counterProgrammatic==5" style="z-index:7; position:relative">
 				<v-btn small to="/commodities?step=0">Commodities <v-icon dark right small>arrow_forward</v-icon></v-btn>
 			</div>
-		</div>  
-		<page0 v-if="counter==0"></page0>
-		<page1 v-if="counter==1"></page1> 
-		<page2 v-if="counter==2"></page2> 
-		<page3 v-if="counter==3"></page3> 
-		<page4 v-if="counter==4"></page4> 
-		<page5 v-if="counter==5"></page5>  
+		</div>
+		<v-speed-dial 
+            bottom
+            left
+            absolute
+            direction="left"
+            transition="slide-x-transition" >
+            <template v-slot:activator> 
+                <v-btn @click="nextItem('left')" fab x-small dark> <v-icon dark small>keyboard_arrow_left</v-icon></v-btn>
+				<v-btn @click="nextItem('right')" fab x-small dark> <v-icon dark small>keyboard_arrow_right</v-icon></v-btn>
+            </template> 
+        </v-speed-dial>  
+		<page0 v-if="counterProgrammatic==0"></page0>
+		<page1 v-if="counterProgrammatic==1"></page1> 
+		<page2 v-if="counterProgrammatic==2"></page2> 
+		<page3 v-if="counterProgrammatic==3"></page3> 
+		<page4 v-if="counterProgrammatic==4"></page4> 
+		<page5 v-if="counterProgrammatic==5"></page5>  
 	</span>
 </template>
 
@@ -35,16 +46,16 @@ import comp4 from '../components/Programmatic/Page-25'
 import comp5 from '../components/Programmatic/Page-29'
  
 export default {
-	props: ['counter_set'],
+	props: ['counterProgrammatic_set'],
 	data: function () {
 		return {
-			counter: 0,
+			counterProgrammatic: 0,
 			e6: 1,
 			right: true,
 			miniVariant: false, 
 			background: false,
 			drawer: false, 
-			tab: null,
+			tabProgrammatic: null,
 			items: [
 				{ title: 'Click Me' },
 				{ title: 'Click Me' },
@@ -62,23 +73,23 @@ export default {
 		'page5': comp5, 
 	},
 	methods: { 
-		nextItem() {  
+		nextItem(direction) {  
             /*right*/
-			if(event.keyCode == 39 && this.$route.name=="Programmatic"){
-				if(this.counter < 5){
-					this.counter++;
-					this.tab++;
-					this.$router.push({ path: '/programmatic', query: { step: this.counter }}).catch()
-				}  else { 
+			if((event.keyCode == 39 || direction == 'right') && this.$route.name=="Programmatic"){  
+				if(this.counterProgrammatic < 5){ 
+					this.counterProgrammatic++;
+					this.tabProgrammatic++;
+					this.$router.push({ path: '/programmatic', query: { step: this.counterProgrammatic }}).catch()
+				}  else {  
 					this.$router.push({ path: '/commodities', query: { step: 0 }}).catch()
-				}
+				} 
 			} 
 			/*left*/
-			if(event.keyCode == 37 && this.$route.name=="Programmatic"){ 
-				if(this.counter > 0){
-					this.counter--;
-					this.tab--;
-					this.$router.push({ path: '/programmatic', query: { step: this.counter }}).catch()
+			if((event.keyCode == 37 || direction == 'left') && this.$route.name=="Programmatic"){ 
+				if(this.counterProgrammatic > 0){
+					this.counterProgrammatic--;
+					this.tabProgrammatic--;
+					this.$router.push({ path: '/programmatic', query: { step: this.counterProgrammatic }}).catch()
 				} else  {  
 					this.$router.push({ path: '/map', query: { step: 5 }}).catch()  
 				}
@@ -86,22 +97,22 @@ export default {
 		},
 		async onTabChange(clickedTab)
 		{	
-			this.tab =  clickedTab;
-			this.counter =  clickedTab;
+			this.tabProgrammatic =  clickedTab;
+			this.counterProgrammatic =  clickedTab;
 			this.$router.push({ path: '/programmatic', query: { step: clickedTab }}).catch()
 		}
 	},
-	mounted () {  
-		document.addEventListener("keyup", this.nextItem);		 
-	},  
+	mounted () {    
+		document.addEventListener("keyup", this.nextItem);	 
+	},
+	beforeDestroy() {
+		document.removeEventListener('keyup', this.nextItem);
+    },
 	created() { 
 		if(this.$route.query.step){ 
-			this.tab =  parseInt(this.$route.query.step);
-			this.counter =  parseInt(this.$route.query.step);  
-		} else {
-			this.$router.push({ path: '/programmatic', query: { step: 0 }}).catch()
+			this.tabProgrammatic =  parseInt(this.$route.query.step);
+			this.counterProgrammatic =  parseInt(this.$route.query.step);  
 		}
 	},
-
 }
 </script>

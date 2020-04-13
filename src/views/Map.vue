@@ -5,7 +5,7 @@
 				<v-card class="tab-nav-minga">
 					<v-tabs v-model="tab" background-color="primary" color="white" dark @change="onTabChange" center-active show-arrows>
 						<v-tab>MAP</v-tab>
-						<v-tab>Qué es?</v-tab>
+						<v-tab>¿Qué es?</v-tab>
 						<v-tab>Publishers</v-tab> 
 						<v-tab>Audiencia </v-tab> 
 						<v-tab>Segmentacion</v-tab>  
@@ -13,16 +13,27 @@
 					</v-tabs>
 				</v-card>  
 			</template> 
-			<div class="my-2 text-right" v-if="counter==5" style="z-index:7; position:relative">
+			<div class="my-2 text-right" v-if="counterMAP==5" style="z-index:7; position:relative">
 				<v-btn small to="/programmatic?step=0">Programmatic <v-icon dark right small>arrow_forward</v-icon></v-btn>
 			</div>
-		</div>  
-		<page0 v-if="counter==0"></page0>
-		<page1 v-if="counter==1"></page1> 
-		<page2 v-if="counter==2"></page2> 
-		<page3 v-if="counter==3"></page3> 
-		<page4 v-if="counter==4"></page4> 
-		<page5 v-if="counter==5"></page5>  
+		</div> 
+		<v-speed-dial 
+            bottom
+            left
+            absolute
+            direction="left"
+            transition="slide-x-transition" >
+            <template v-slot:activator> 
+                <v-btn @click="nextItem('left')" fab x-small dark> <v-icon dark small>keyboard_arrow_left</v-icon></v-btn>
+				<v-btn @click="nextItem('right')" fab x-small dark> <v-icon dark small>keyboard_arrow_right</v-icon></v-btn>
+            </template> 
+        </v-speed-dial>
+		<page0 v-if="counterMAP==0"></page0>
+		<page1 v-if="counterMAP==1"></page1> 
+		<page2 v-if="counterMAP==2"></page2> 
+		<page3 v-if="counterMAP==3"></page3> 
+		<page4 v-if="counterMAP==4"></page4> 
+		<page5 v-if="counterMAP==5"></page5>  
 	</span>
 </template>
 
@@ -37,7 +48,7 @@ import comp5 from '../components/Map/Page-9'
 export default { 
 	data: function () {
 		return {
-			counter: 0, 
+			counterMAP: 0, 
 			right: true, 
 			tab: null, 
 		}
@@ -51,41 +62,45 @@ export default {
 		'page5': comp5, 
 	},
 	methods: { 
-		nextItem() { 
+		nextItem(direction) { 
 			/*right*/
-			if(event.keyCode == 39 && this.$route.name=="MAP"){
-				if(this.counter < 5){
-					this.counter++;
+			if((event.keyCode == 39 || direction == 'right') && this.$route.name=="MAP"){
+				if(this.counterMAP < 5){
+					this.counterMAP++;
 					this.tab++;
-					this.$router.push({ path: '/map', query: { step: this.counter }}).catch()
+					this.$router.push({ path: '/map', query: { step: this.counterMAP }}).catch()
 				}  else { 
 					this.$router.push({ path: '/programmatic', query: { step: 0 }}).catch()
 				}
 			} 
 			/*left*/
-			if(event.keyCode == 37 && this.$route.name=="MAP"){ 
-				if(this.counter > 0){
-					this.counter--;
+			if((event.keyCode == 37 || direction == 'left') && this.$route.name=="MAP"){ 
+				if(this.counterMAP > 0){
+					this.counterMAP--;
 					this.tab--;
-					this.$router.push({ path: '/map', query: { step: this.counter }}).catch()
+					this.$router.push({ path: '/map', query: { step: this.counterMAP }}).catch()
 				} else  {  
 					this.$router.push({ path: '/', query: { step: 2 }}).catch()  
 				}
 			}
 		},
 		async onTabChange(clickedTab)
-		{	
+		{	 
 			this.tab =  clickedTab;
-			this.counter =  clickedTab;
+			this.counterMAP =  clickedTab;
+			this.$router.push({ path: '/map', query: { step: clickedTab }}).catch()
 		}
 	},
-	mounted () {  
-		document.addEventListener("keyup", this.nextItem);		 
-	},  
+	mounted () { 
+		document.addEventListener("keyup", this.nextItem);  
+	},
+	beforeDestroy() {
+		document.removeEventListener('keyup', this.nextItem);
+    },
 	created() { 
 		if(this.$route.query.step){ 
 			this.tab =  parseInt(this.$route.query.step);
-			this.counter =  parseInt(this.$route.query.step);  
+			this.counterMAP =  parseInt(this.$route.query.step);  
 		} else {
 			this.$router.push({ path: '/map', query: { step: 0 }}).catch()
 		}

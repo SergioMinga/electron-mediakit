@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app"> 
       <router-view/>
         <v-speed-dial 
             bottom
@@ -16,7 +16,7 @@
             </template>
             <v-btn to="/adshouse"> Adshouse</v-btn>
             <v-btn to="/commodities"> Commodities</v-btn>
-            <v-btn to="/programmatic"> Programatic</v-btn>
+            <v-btn to="/programmatic"> Programmatic</v-btn>
             <v-btn to="/map"> MAP </v-btn>
             <v-btn to="/"> Mingadigital </v-btn>
         </v-speed-dial>
