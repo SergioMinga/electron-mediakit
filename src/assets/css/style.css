@@ -271,3 +271,42 @@ a.v-btn.v-btn--contained.v-btn--router.theme--light.v-size--default {
     }
     
 }
+body .animation {
+    visibility: hidden;
+    transition: all .4s;
+}
+body .animation.animated {
+    visibility: visible;
+}
+body .animation.delay-05 {
+    -animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+}
+body .animation.duration-100 {
+    animation-duration: 1s !important;
+    -animation-duration: 1s !important;
+    -webkit-animation-duration: 1s !important;
+    -moz-animation-duration: 1s !important;
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.absolute-box{
+        left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position:absolute;
+} 
+
+.aos-animate,body[data-aos-delay="0"] [data-aos].aos-animate {transition-delay:0s}
+.aos-animate,body[data-aos-delay="1000"] [data-aos].aos-animate {transition-delay:1.0s}
+.aos-animate,body[data-aos-delay="1500"] [data-aos].aos-animate {transition-delay:1.5s}
+.aos-animate,body[data-aos-delay="2000"] [data-aos].aos-animate {transition-delay:2.0s}
+.aos-animate,body[data-aos-delay="2500"] [data-aos].aos-animate {transition-delay:2.5s}
+.aos-animate,body[data-aos-delay="3000"] [data-aos].aos-animate {transition-delay:3.0s}
+.aos-animate,body[data-aos-delay="3500"] [data-aos].aos-animate {transition-delay:3.5s} 

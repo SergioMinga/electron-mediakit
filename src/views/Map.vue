@@ -38,12 +38,12 @@
 </template>
 
 <script>
-import comp0 from '../components/Map/Page-4'
-import comp1 from '../components/Map/Page-5'
-import comp2 from '../components/Map/Page-6' 
-import comp3 from '../components/Map/Page-7' 
-import comp4 from '../components/Map/Page-8' 
-import comp5 from '../components/Map/Page-9'
+import comp0 from '../components/Map/Page-1'
+import comp1 from '../components/Map/Page-2'
+import comp2 from '../components/Map/Page-3' 
+import comp3 from '../components/Map/Page-4' 
+import comp4 from '../components/Map/Page-5' 
+import comp5 from '../components/Map/Page-6'
  
 export default { 
 	data: function () {
